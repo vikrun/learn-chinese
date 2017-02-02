@@ -1,0 +1,9 @@
+https://github.com/VadimDez/ng2-order-pipe --PIPE
+https://swimlane.gitbooks.io/ngx-datatable/api/table/outputs.html --TABLE
+http://valor-software.com/ng2-table/
+https://github.com/swimlane/ngx-charts --CHARTS
+https://surmon-china.github.io/ng2-quill-editor/ --EDITOR
+https://vlio20.github.io/ng2-date-picker/
+https://github.com/salemdar/angular2-cookie
+https://github.com/auth0/angular2-jwt
+

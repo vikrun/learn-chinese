@@ -2,9 +2,11 @@ import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
+
 import {AppComponent} from "./app.component";
-import {ErrorComponent} from "./error/error.component";
-import {NotFoundComponent} from "./not-found/not-found.component";
+import {HomeComponent} from "./home/home.component";
+import {TopComponent} from "./top/top.component";
+import {BottomComponent} from "./bottom/bottom.component";
 import {NavbarComponent} from "./navbar/navbar.component";
 import {PinyinComponent} from "./pinyin/pinyin.component";
 import {PronunctionComponent} from "./pronunction/pronunction.component";
@@ -19,20 +21,30 @@ import {NumbersComponent} from "./numbers/numbers.component";
 import {CalendarComponent} from "./calendar/calendar.component";
 import {CultureComponent} from "./culture/culture.component";
 import {ThingstodoComponent} from "./thingstodo/thingstodo.component";
-import {FamiliesComponent} from "./families/families.component";
 import {AllaboutmeComponent} from "./allaboutme/allaboutme.component";
 import {SoundsComponent} from "./sounds/sounds.component";
 import {ButtonModule} from "primeng/components/button/button";
 
+import {ServerErrorComponent} from "./error/server-error/server-error.component";
+import {PageNotFoundComponent} from "./error/page-not-found/page-not-found.component";
+
+
+import {routing} from "./app.routing";
 import {AngularFireModule} from "angularfire2";
 import {firebaseConfig} from "../environments/firebase.config";
+import {ChartModule} from "primeng/components/chart/chart";
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        ErrorComponent,
-        NotFoundComponent,
+
+        HomeComponent,
+        TopComponent,
+        BottomComponent,
+        ServerErrorComponent,
+        PageNotFoundComponent,
+
         NavbarComponent,
         PinyinComponent,
         PronunctionComponent,
@@ -47,7 +59,6 @@ import {firebaseConfig} from "../environments/firebase.config";
         CalendarComponent,
         CultureComponent,
         ThingstodoComponent,
-        FamiliesComponent,
         AllaboutmeComponent,
         SoundsComponent
     ],
@@ -55,9 +66,11 @@ import {firebaseConfig} from "../environments/firebase.config";
         BrowserModule,
         FormsModule,
         HttpModule,
+        routing,
 
         AngularFireModule.initializeApp(firebaseConfig),
-        ButtonModule
+        ButtonModule,
+        ChartModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
