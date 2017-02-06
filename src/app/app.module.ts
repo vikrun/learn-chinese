@@ -35,7 +35,6 @@ import {firebaseConfig} from "../environments/firebase.config";
 import {ChartModule} from "primeng/components/chart/chart";
 
 
-
 @NgModule({
     declarations: [
         AppComponent,
